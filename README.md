@@ -10,3 +10,7 @@ Posteriormente será revisado por la Teacher Kristell para verificar que todo es
 - hacer **PULL** del código cada vez que ingresen a VisualStudioCode
 - Mantener documentado el código (especificar con comentarios lo que hace este)
 - No repetir el mismo código
+
+## Los encargados de hacer los Pull Requests
+Estos son los encargados de subir el código al repositorio
+> Daphne > Angelline > José > Jorge

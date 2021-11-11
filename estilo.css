@@ -6,10 +6,11 @@ body{
 }
 
 .content{
-padding: 1em;
-border: 1em ;
+position: absolute;
 width:1em;
-margin: 1em ;
+height: 1em;
+top: 20em;
+left: 9em;
 }
 /* Botones de Incio de Sesión y de registrar*/
 
@@ -20,8 +21,4 @@ padding: 1em  ;
 border-radius: 10px;
 outline: none;
 border: none;
-}
-
-@media screen and (max-width: 500px){
-    
 }

@@ -7,6 +7,6 @@ In this space we'll colaborate with the code source of the page.
 Posteriormente será revisado por la Teacher Kristell para verificar que todo esté sin algún *bug*
 
 ## Recuerden seguir lo siguiente:
-- hacer **PULL** del código cada vez que ingresen a GitHub
+- hacer **PULL** del código cada vez que ingresen a VisualStudioCode
 - Mantener documentado el código (especificar con comentarios lo que hace este)
 - No repetir el mismo código

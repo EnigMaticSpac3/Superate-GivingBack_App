@@ -1,17 +1,19 @@
 /*Celulares*/
 @media(max-width:480px) {
     body {
-         background-color: antiquewhite;
+         background-color:#F4C2C2;
          width: 100%;
          height: 100%;
+         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
     .center {
          text-align: center;
     }
     .cuadro{
-         background-color: whitesmoke;
+         background-color: white;
          height: 560px;
-         width: 350px;
+         width: 340px;
+         border-radius: 10px;
     }
     .block{
          display: block;
@@ -22,11 +24,12 @@
     .border{
          border-width: 0.05cm;
          border-color: skyblue;
-         border-radius: 7px;
+         border-radius: 5px;
          width: 200px;
          height: 40px;
     }
-    .inline{
-          display: inline;
+    a{
+         color: #c874f0;
     }
+
 }  

@@ -1,15 +1,17 @@
 body{
-    background:lawngreen;
+    background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fsp.depositphotos.com%2Fstock-photos%2Ffondo-color-pastel.html&psig=AOvVaw0S3jGt4i0qxRqr70_49Xvx&ust=1637091862010000&source=images&cd=vfe&ved=0CAgQjRxqFwoTCPifrMmQm_QCFQAAAAAdAAAAABAD");
      font-size: 16px;
 }
 
 .content{
-position: absolute;
-background: white;
-width: 50%;
-height: 50%;
-top: 20%;
-left: 25%;
+    position: absolute;
+    background: white;
+    width: 50%;
+    height: 50%;
+    top: 20%;
+    left: 25%;
+    border: 5px solid black;
+    /* border-style: ; */
 }
 
 h1{

@@ -1,0 +1,32 @@
+/*Celulares*/
+@media(max-width:480px) {
+    body {
+         background-color: antiquewhite;
+         width: 100%;
+         height: 100%;
+    }
+    .center {
+         text-align: center;
+    }
+    .cuadro{
+         background-color: whitesmoke;
+         height: 560px;
+         width: 350px;
+    }
+    .block{
+         display: block;
+    }
+    .inline{
+        display: inline;
+    }
+    .border{
+         border-width: 0.05cm;
+         border-color: skyblue;
+         border-radius: 7px;
+         width: 200px;
+         height: 40px;
+    }
+    .inline{
+          display: inline;
+    }
+}  

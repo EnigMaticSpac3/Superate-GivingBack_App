@@ -1,24 +1,7 @@
-body {
-    background-image: url("../img/fondodepantalla.png");
-    font-size: 16px;
-}
-
-.content{
-    position: absolute;
-    background: white;
-    width: 27em;
-    height: 50em;
-    top: 14em;
-    left: 5em;
-    border: 5px solid black;
-    /* border-style: ; */
-}
-
-h1{
-    text-align: center;
-}
 
 .img1{
-    width: 20em;
-    height: 18em;
+    width: 15em;
+    height: 10em;
+    position: relative;
+    left: 2em;
 }

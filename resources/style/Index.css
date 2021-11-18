@@ -1,0 +1,20 @@
+
+.img1{
+    width: 15em;
+    height: 10em;
+    position: relative;
+    left: 2em;
+}
+.btn{
+    margin-top: 2em;
+    margin-left: 1.6em;
+    border-radius: 1.2em;
+    border-color: rgb(127, 186, 0);
+    border: 0.1em  solid;
+    width: 18em;
+    height: 3em;
+    background-color: white;
+    color: rgb(127, 186, 0);
+
+  }
+  

@@ -51,22 +51,27 @@
     }
 
     .label{
+          margin-top: 0.9em;
+    }
 
+    .input{
+         margin-top: 0.5em;
     }
 
     /*Boton verde para avanzar*/
     .button {
-         margin-top: 3em;
+         position: absolute;
          background-color: #8ecc3d;
          height: 3em;
          width: 10em;
          border-radius: 5px;
-         text-decoration: none;
-         text-align: center;
-         color: black;
     }
     .textcenter {
-         
+         position: relative;
+          text-decoration: none;
+          color: black;
+          text-align: center;
+          margin-top: 0.9em;
     }
 
 }  

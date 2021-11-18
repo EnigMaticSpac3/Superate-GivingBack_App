@@ -1,6 +1,6 @@
 <!-- HTML de la 1era sección de registro -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,27 +9,29 @@
     <title>Registro</title>
 </head>
 <body>
+     <p class="hidden">_Compatible solamente con dispositivos celulares.</p>
+     
      <div class="content" >
           <div class="center title">
                <h1>Registro</h1>
           </div>
-          <form action="" class="formb">
+          <form action="" class="formb" method="post">
                <div class="label">
                     <label for="Name">Nombre</label>
-                    <input class="block border" type="text" placeholder="Ingrese un nombre de usuario"> 
+                    <input required class=" input" type="text" placeholder="Ingrese un nombre de usuario"> 
                </div>
                <div class="label">
                     <label class="block" for="">Apellido</label>
-                    <input class="block border" type="text" placeholder="Ingrese su apellido">
+                    <input  required class=" input" type="text" placeholder="Ingrese su apellido">
                </div>
 
                <div class="label">
                     <label for="">Elige</label> <br>
-                    <input class="input"  type="radio" name="level" value="Freshman" >Freshman <br>
-                    <input class="input"  type="radio" name="level" value="Junior">Junior <br>
-                    <input class="input"  type="radio" name="level" value="Senior">Senior <br>
-                    <input class="input"  type="radio" name="level" value="Egresado">Egresado <br>
-                    <input class="input"  type="radio" name="level" value="Teacher">Teacher <br>
+                    <input class="top" type="radio" name="level" value="Freshman" >Freshman <br>
+                    <input class="top" type="radio" name="level" value="Junior">Junior <br>
+                    <input class="top" type="radio" name="level" value="Senior">Senior <br>
+                    <input class="top" type="radio" name="level" value="Egresado">Egresado <br>
+                    <input class="top"  type="radio" name="level" value="Teacher">Teacher <br>
                </div>
 
  

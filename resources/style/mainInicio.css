@@ -1,11 +1,30 @@
 /*Main css de la parte de Inicio y registro*/
 
+@media(min-width:481px){
+     body{
+          background-color: black;
+          color: white;
+          font-family: 'Courier New', Courier, monospace, sans-serif;
+          font-size: small;
+     }
+     div{
+          display: none;
+     }
+
+}
+
 /*Celulares*/
 @media(max-width:480px) {
     body {
          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-         background-image: url("../img/fondodepantalla.png")
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         background-image: url("../img/fondodepantalla.png");
+
     }
+    .hidden {display: none;}
+
     /*Class para el texto centrado*/
     .center {
          text-align: center;
@@ -18,13 +37,13 @@
     }
     /*Class para el rectangulo con el contenido de las 5 páginas de Registro e Inicio de sesión*/
     .content{
+         margin:60em 10em 10em 10em;
          position: absolute;
          background-color: white;
-         width: 18em;
-         height: 35em;
-         top: 8em;
-         left: 2.8em;
+         width: 19em;
+         height: 36em;
          border-radius: 6px;
+         box-shadow:  2px 2px 0 rgb(177, 176, 176);
     }
     .block{
          display: block;
@@ -46,32 +65,57 @@
 
     /*Clase para el contendor de formularios*/
     .formb{
-         margin-top: 3em;
-         margin-left: 2em;
+         margin-top: 2.2em;
+         margin-left: 1.6em;
     }
 
     .label{
-          margin-top: 0.9em;
+          margin: 1.5em 1em 1.5em 0.2em;
+          position: relative;
+          width: 250px;
+          font-size: 17px;
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
+
+
 
     .input{
-         margin-top: 0.5em;
+         background: none;
+         font-size: 16px;
+         padding: 9px 0.2px 9px 1px;
+         display: block;
+         width: 100%;
+         border-radius: 5px;
+         border-color: rgba(245, 245, 245);
+         border-top: rgb(245, 245, 245) solid;
+         border-left: rgb(245, 245, 245) solid;
     }
 
+    input:focus{
+     outline: none;
+     color: rgb(3, 3, 3); }
+     .top{
+          margin-top: 0.7em;
+     }
     /*Boton verde para avanzar*/
     .button {
+         margin:0.5em 2em ;
          position: absolute;
-         background-color: #8ecc3d;
-         height: 3em;
-         width: 10em;
-         border-radius: 5px;
+         background: rgb(62, 212, 87);
+         height: 50px;
+         width: 60%;
+         border: none;
+         border-radius: 9px;
     }
     .textcenter {
          position: relative;
           text-decoration: none;
           color: black;
           text-align: center;
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          font-weight: 900;
           vertical-align: middle;
+
 
     }
 

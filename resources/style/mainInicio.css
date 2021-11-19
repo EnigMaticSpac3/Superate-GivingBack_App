@@ -99,7 +99,7 @@
      }
     /*Boton verde para avanzar*/
     .button {
-         margin:0.5em 2em ;
+         margin: 0.5.5em 2em 5em;
          position: absolute;
          background: rgb(62, 212, 87);
          height: 50px;
@@ -107,10 +107,19 @@
          border: none;
          border-radius: 9px;
     }
+    .button2{
+     margin: 5em 2em 5em;
+     position: absolute;
+     background: rgb(62, 212, 87);
+     height: 50px;
+     width: 60%;
+     border: none;
+     border-radius: 9px;
+}    
     .textcenter {
          position: relative;
           text-decoration: none;
-          color: black;
+          color: white;
           text-align: center;
           font-family: Verdana, Geneva, Tahoma, sans-serif;
           font-weight: 900;

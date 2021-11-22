@@ -2,11 +2,22 @@
 
 @media(min-width:481px){
      body{
+          height: 100%;
+          width: 100%;
           background-color: black;
           color: white;
           font-family: 'Courier New', Courier, monospace, sans-serif;
-          font-size: small;
+          font-size: 35px;
      }
+     .message{
+          position: absolute;
+          top: 8.5em;
+          left: 9em;
+          text-align:justify;
+          font-weight: bold;
+
+     }
+
      div{
           display: none;
      }
@@ -21,8 +32,8 @@
          justify-content: center;
          align-items: center;
          background-image: url("../img/fondodepantalla.png");
-
     }
+    /*Mensaje para dispositivos no compatibles*/
     .hidden {display: none;}
 
     /*Class para el texto centrado*/
@@ -59,6 +70,7 @@
          height: 40px;
     }
 
+
     a{
          color: #c874f0;
     }
@@ -67,6 +79,10 @@
     .formb{
          margin-top: 2.2em;
          margin-left: 1.6em;
+    }
+    .formb div p{
+         margin-left: 0.2em;
+         font-size: 17px;
     }
 
     .label{
@@ -94,12 +110,23 @@
     input:focus{
      outline: none;
      color: rgb(3, 3, 3); }
+
+     .showp{
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          font-size: small;
+          color: rgba(16, 16, 85, 0.671);
+          font-weight: bold;
+          font-style: oblique;
+     }
+
      .top{
           margin-top: 0.7em;
      }
+
     /*Boton verde para avanzar*/
     .button {
-         margin: 0.5.5em 2em 5em;
+         top: 28em;
+         left: 3.5em;
          position: absolute;
          background: rgb(62, 212, 87);
          height: 50px;
@@ -108,24 +135,22 @@
          border-radius: 9px;
     }
     .button2{
-     margin: 5em 2em 5em;
      position: absolute;
+     top: 26.3em;
+     left: 3.5em;
      background: rgb(62, 212, 87);
      height: 50px;
      width: 60%;
      border: none;
      border-radius: 9px;
+     font-size: 17px;
 }    
     .textcenter {
-         position: relative;
           text-decoration: none;
           color: white;
           text-align: center;
           font-family: Verdana, Geneva, Tahoma, sans-serif;
           font-weight: 900;
-          vertical-align: middle;
-
-
     }
 
 }  

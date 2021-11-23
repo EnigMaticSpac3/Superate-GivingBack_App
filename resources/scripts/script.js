@@ -45,5 +45,3 @@ $('#pass').keyup(function(e) {
     return true;
 });
 
-
-

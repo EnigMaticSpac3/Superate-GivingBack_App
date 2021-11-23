@@ -9,7 +9,7 @@
           font-family: 'Courier New', Courier, monospace, sans-serif;
           font-size: 35px;
      }
-     .message{
+     .messageH{
           position: absolute;
           top: 8.5em;
           left: 9em;
@@ -23,12 +23,41 @@
      }
 
 }
-/*Celulares*/
+
+/*Dispositivos celulares*/
 @media(max-width:480px) {
-     body{
-          background-color: white;
+     body {
+          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
      }
-     .hidden{
-          display: none;
-     }
-}
+     /*Mensaje para dispositivos no compatibles*/
+
+     .hiddenH{display: none;}
+
+     .buttonsave{
+          position: absolute;
+          top: 26.3em;
+          left: 3.5em;
+          background: rgb(123, 194, 29);
+          height: 50px;
+          width: 60%;
+          border: none;
+          border-radius: 30px;
+          font-size: 17px;
+      }    
+      .textcenter {
+          text-decoration: none;
+          color: white;
+          text-align: center;
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          font-weight: 900;
+      }
+      .langbackground{
+          background: rgb(12, 74, 136);
+          height: 50px;
+          width: 60%;
+          border: none;
+      }
+      .inline{
+          display: inline;
+      }
+}     

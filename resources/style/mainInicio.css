@@ -144,7 +144,7 @@
      border: none;
      border-radius: 9px;
      font-size: 17px;
-}    
+    }    
     .textcenter {
           text-decoration: none;
           color: white;
@@ -152,5 +152,24 @@
           font-family: Verdana, Geneva, Tahoma, sans-serif;
           font-weight: 900;
     }
+    .input1{
+     background: none;
+     font-size: 16px;
+     padding: 9px 0.2px 9px 1px;
+     display: block;
+     width: 100%;
+     border-radius: 5px;
+     border-color: rgba(245, 245, 245);
+     border-top: rgb(245, 245, 245) solid;
+     border-left: rgb(245, 245, 245) solid;
+    }
+    .noborder1{
+     border: none;
+     }
+    #togglePassword{
+     cursor: pointer;
+    }
+
 
 }  
+

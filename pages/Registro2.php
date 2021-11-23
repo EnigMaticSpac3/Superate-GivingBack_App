@@ -1,3 +1,35 @@
+<?php 
+    include("conexión.php");
+
+    if (isset($_POST["Confirmar"])) {
+        $_correo = mysqli_real_escape_string($conexion,$_POST['Email']);
+        $_contraseña = mysqli_real_escape_string($conexion,$_POST['Contraseña']);
+        $sqluser = "SELECT user_id FROM users WHERE usuario = '$users'";
+        $resultadouser = $conexion -> query ($sqluser);
+        $filas= $resultadouser->num_rows;
+        if ($filas > 0){
+            echo"<script>
+                   alert('El usuario ya existe');
+                   window.location= 'Registro.php'; 
+            </script>";       
+        }
+        else{
+            $sqlusuario = "INSERT INTO users (user_name, user_surname, user_password, user_email) VALUES ('$_correo', '$_contraseña')";
+            $resultadousuario = $conexion -> query ($sqlusuario);
+            if ($resultadousuario > 0) {
+                echo"<script>
+                   alert('Registro exitoso');
+                   window.location= 'Registro.php'; 
+            </script>"; 
+            }
+            else{
+                
+            }
+
+        }
+
+    }
+?>
 <!-- HTML de la 2da sección de registro -->
 <!DOCTYPE html>
 <html lang="en">

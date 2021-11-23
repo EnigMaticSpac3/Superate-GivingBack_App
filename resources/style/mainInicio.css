@@ -1,0 +1,156 @@
+/*Main css de la parte de Inicio y registro*/
+
+@media(min-width:481px){
+     body{
+          height: 100%;
+          width: 100%;
+          background-color: black;
+          color: white;
+          font-family: 'Courier New', Courier, monospace, sans-serif;
+          font-size: 35px;
+     }
+     .message{
+          position: absolute;
+          top: 8.5em;
+          left: 9em;
+          text-align:justify;
+          font-weight: bold;
+
+     }
+
+     div{
+          display: none;
+     }
+
+}
+
+/*Celulares*/
+@media(max-width:480px) {
+    body {
+         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         background-image: url("../img/fondodepantalla.png");
+    }
+    /*Mensaje para dispositivos no compatibles*/
+    .hidden {display: none;}
+
+    /*Class para el texto centrado*/
+    .center {
+         text-align: center;
+    }
+
+    /*Class para el titulo*/
+    .title {
+         margin-top: 3em;
+         margin-bottom: 1em;
+    }
+    /*Class para el rectangulo con el contenido de las 5 páginas de Registro e Inicio de sesión*/
+    .content{
+         margin:60em 10em 10em 10em;
+         position: absolute;
+         background-color: white;
+         width: 19em;
+         height: 36em;
+         border-radius: 6px;
+         box-shadow:  2px 2px 0 rgb(177, 176, 176);
+    }
+    .block{
+         display: block;
+    }
+    .inline{
+        display: inline;
+    }
+    .border{
+         border-width: 0.05cm;
+         border-color: skyblue;
+         border-radius: 5px;
+         width: 200px;
+         height: 40px;
+    }
+
+
+    a{
+         color: #c874f0;
+    }
+
+    /*Clase para el contendor de formularios*/
+    .formb{
+         margin-top: 2.2em;
+         margin-left: 1.6em;
+    }
+    .formb div p{
+         margin-left: 0.2em;
+         font-size: 17px;
+    }
+
+    .label{
+          margin: 1.5em 1em 1.5em 0.2em;
+          position: relative;
+          width: 250px;
+          font-size: 17px;
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+
+
+    .input{
+         background: none;
+         font-size: 16px;
+         padding: 9px 0.2px 9px 1px;
+         display: block;
+         width: 100%;
+         border-radius: 5px;
+         border-color: rgba(245, 245, 245);
+         border-top: rgb(245, 245, 245) solid;
+         border-left: rgb(245, 245, 245) solid;
+    }
+
+    input:focus{
+     outline: none;
+     color: rgb(3, 3, 3); }
+
+     .showp{
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          font-size: small;
+          color: rgba(16, 16, 85, 0.671);
+          font-weight: bold;
+          font-style: oblique;
+     }
+
+     .top{
+          margin-top: 0.7em;
+     }
+
+    /*Boton verde para avanzar*/
+    .button {
+         top: 28em;
+         left: 3.5em;
+         position: absolute;
+         background: rgb(62, 212, 87);
+         height: 50px;
+         width: 60%;
+         border: none;
+         border-radius: 9px;
+    }
+    .button2{
+     position: absolute;
+     top: 26.3em;
+     left: 3.5em;
+     background: rgb(62, 212, 87);
+     height: 50px;
+     width: 60%;
+     border: none;
+     border-radius: 9px;
+     font-size: 17px;
+}    
+    .textcenter {
+          text-decoration: none;
+          color: white;
+          text-align: center;
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          font-weight: 900;
+    }
+
+}  

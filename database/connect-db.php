@@ -3,7 +3,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$db = "practice";
+$db = "giver_test";
 
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $db);

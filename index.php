@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['email'])) {
+  header("location: ./pages/welcome.html");
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

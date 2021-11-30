@@ -1,3 +1,9 @@
+<?php
+include '../database/connect-db.php';
+
+?>
+
+
 <!-- HTML de la 1era sección de registro -->
 <!DOCTYPE html>
 <html lang="es">
@@ -15,20 +21,20 @@
           <div class="center title">
                <h1>Registro</h1>
           </div>
-          <form action="" class="formb" method="post">
+          <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" class="formb" method="post">
                <div class="label">
                     <label for="Name">Nombre</label>
-                    <input required class=" input" type="text" placeholder="Ingrese un nombre de usuario"> 
+                    <input required name="first_name" class=" input" type="text" placeholder="Ingrese su nombre"> 
                </div>
                <div class="label">
                     <label class="block" for="">Apellido</label>
-                    <input  required class=" input" type="text" placeholder="Ingrese su apellido">
+                    <input  required name="last_name" class=" input" type="text" placeholder="Ingrese su apellido">
                </div>
 
                <div class="label">
                     <label for="Elige">Elige</label> 
                     <br>
-                    <select class="input" name="Elige" id="">
+                    <select name="promo" class="input" name="Elige">
                          <option value="Freshman">Freshman</option>
                          <option value="Junior">Junior</option>
                          <option value="Senior">Senior</option>
@@ -38,9 +44,9 @@
                </div>
 
  
-               <a   href="Registro2.html">
+               <a   href="./Registro2.php">
                     <div class="button">
-                        <p class="textcenter">Siguiente</p>
+                        <p class="textcenter" name="next">Siguiente</p>
                     </div>
                 </a>
           </form>

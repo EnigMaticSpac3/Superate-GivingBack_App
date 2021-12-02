@@ -1,0 +1,26 @@
+{
+    "short_name": "Giver",
+    "name": "Giver App",
+    "icons": [
+        {
+            "src": "./resources/img/giverlogooriginal.svg",
+            "sizes": "any",
+            "purpose": "maskable"
+        },
+        {
+            "src": "./resources/img/icons/givericon-192x192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "./resources/img/icons/givericon-512x512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "start_url": "/index.php",
+    "scope": "/index.php",
+    "background_color": "#FFFFFF",
+    "display": "standalone",
+    "theme_color": "#FFFFFF"
+}

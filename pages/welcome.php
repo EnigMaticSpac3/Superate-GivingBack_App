@@ -2,17 +2,32 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?php include "../includes/meta-inc.php"; ?>
     <title>Inicio</title>
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="../resources/style/Index.css">
     <link rel="stylesheet" href="../resources/style/mainInicio.css">
+
+    <!-- MANIFEST - MAKES THE PAGE AN APP -->
+    <link rel="manifest" href="../manifest.json">
+
 </head>
 <body>
+    
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+
+    </div>
+    
+    
+
     <p class="hidden message">_No compatible con este dispositivo.</p>
 
-    <div class="content">
+    <div id="content" class="content">
         <div class="center title">
             <h1>Bienvenido</h1>
         </div>
@@ -32,10 +47,19 @@
     </div>
         
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script>
-    
 
-</script>
+    <!--====== Javascripts & Jquery ======-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+ 
+            setTimeout(function(){
+                $('body').addClass('loaded');
+            }, 3000);
+
+        });
+    </script>
+    <script src="../resources/scripts/cookie.js"></script>
+    
 </body>
 </html>

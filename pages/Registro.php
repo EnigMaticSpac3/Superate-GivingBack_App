@@ -1,6 +1,8 @@
 <?php
 include '../database/connect-db.php';
 
+// The data of the form will be handled by "registration-inc.php" IN the -Registration2.php-
+
 ?>
 
 
@@ -8,9 +10,8 @@ include '../database/connect-db.php';
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     
+     <?php include "../includes/meta-inc.php" ?>
     <link rel="stylesheet" href="../resources/style/mainInicio.css">
     <title>Registro</title>
 </head>
@@ -21,10 +22,10 @@ include '../database/connect-db.php';
           <div class="center title">
                <h1>Registro</h1>
           </div>
-          <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" class="formb" method="post">
+          <form action="<?php echo htmlspecialchars("./Registro2.php"); ?>" class="formb" method="post">
                <div class="label">
                     <label for="Name">Nombre</label>
-                    <input required name="first_name" class=" input" type="text" placeholder="Ingrese su nombre"> 
+                    <input name="first_name" class=" input" type="text" placeholder="Ingrese su nombre" required> 
                </div>
                <div class="label">
                     <label class="block" for="">Apellido</label>
@@ -34,7 +35,7 @@ include '../database/connect-db.php';
                <div class="label">
                     <label for="Elige">Elige</label> 
                     <br>
-                    <select name="promo" class="input" name="Elige">
+                    <select name="promo" class="input">
                          <option value="Freshman">Freshman</option>
                          <option value="Junior">Junior</option>
                          <option value="Senior">Senior</option>
@@ -43,12 +44,8 @@ include '../database/connect-db.php';
                     </select>
                </div>
 
- 
-               <a   href="./Registro2.php">
-                    <div class="button">
-                        <p class="textcenter" name="next">Siguiente</p>
-                    </div>
-                </a>
+               <input class="button textcenter" name="next" type="submit" value="Siguiente">
+              
           </form>
      </div>
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

@@ -18,7 +18,7 @@
 
      }
 
-     div{
+     .content{
           display: none;
      }
 
@@ -48,6 +48,7 @@
     }
     /*Class para el rectangulo con el contenido de las 5 páginas de Registro e Inicio de sesión*/
     .content{
+         display: block;
          margin:60em 10em 10em 10em;
          position: absolute;
          background-color: white;
@@ -107,7 +108,7 @@
          border-left: rgb(245, 245, 245) solid;
     }
 
-    input:focus{
+    .input:focus{
      outline: none;
      color: rgb(3, 3, 3); }
 
@@ -125,7 +126,6 @@
 
     /*Boton verde para avanzar*/
     .button {
-         top: 28em;
          left: 3.5em;
          position: absolute;
          background: rgb(62, 212, 87);

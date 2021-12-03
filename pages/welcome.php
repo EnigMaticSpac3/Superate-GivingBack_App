@@ -19,6 +19,7 @@
         <div id="loader"></div>
 
         <div class="loader-section section-left"></div>
+        <div class="loader-logo section-left"></div> <!-- This is the logo, a bit bug but.. works -->
         <div class="loader-section section-right"></div>
 
     </div>

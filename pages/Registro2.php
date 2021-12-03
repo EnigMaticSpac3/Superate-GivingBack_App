@@ -3,9 +3,16 @@
 
     // SAVING the data of the form - handled by "registration-inc.php"
     include '../database/registration-inc.php';
-    echo $firstname;
-    echo $lastname;
-    echo $promo;
+        
+    // Store the submitted data sent
+    // via POST method, stored 
+    
+    // Temporarily in $_POST structure.
+    $_SESSION['firstname'] = $_POST['first_name'];
+    $_SESSION['lastname']  = $_POST['last_name'];
+    $_SESSION['promo']     = $_POST['promo'];
+            
+
 ?>
 <!-- HTML de la 2da sección de registro -->
 <!DOCTYPE html>
@@ -23,7 +30,7 @@
         <div class="center title">
             <h1>Registro</h1>
         </div>
-        <form class="formb" action="" method="post">
+        <form class="formb" action="./Registro3.php" method="post">
             <div class="label">
                     <label for="">Email</label>
                     <input placeholder="Ingrese su correo electronico" class="input" type="email" name="email" id="name" required><span class="barra"></span>
@@ -32,17 +39,17 @@
             <div class="label">
                     <label for="">Contraseña</label>
                     <div class="campo">
-                        <input placeholder="Ingrese una contraseña" class="input" type="password" name="contraseña" id="pass" required=""><span class="showp">Mostrar</span><span class="barra"></span>
+                        <input placeholder="Ingrese una contraseña" class="input" type="password" name="user_pwd" id="pass" required=""><span class="showp">Mostrar</span><span class="barra"></span>
                     </div>                        
             </div>
     
             <div class="label">
                     <label for="">Confirmar</label>
                     <div class="campo">
-                        <input placeholder="Confirmar su contraseña" class="input" type="password" name="contraseña2" id="pass2" required=""><span class="showp">Mostrar</span><span class="barra"></span>
+                        <input placeholder="Confirmar su contraseña" class="input" type="password" name="user_pwd2" id="pass2" required=""><span class="showp">Mostrar</span><span class="barra"></span>
                     </div>
                 </div>
-                <input class="button textcenter" name="next" type="submit" value="Siguiente">
+                <input class="button textcenter" name="next2" type="submit" value="Siguiente">
 
         </form>
     </div>

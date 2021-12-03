@@ -105,6 +105,28 @@
     -webkit-animation: spin 1.5s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
       animation: spin 1.5s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
 }
+.loader-logo {
+    position: absolute;
+    background-image: url('../img/giverlogo.png');
+    height: 5em;
+    width: 5em;
+    top: 45.5%;
+    left: 41%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1003;
+    transform: translate(-50%, -50%);
+    animation: logo 1.5s ease infinite;
+}
+@keyframes logo {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(720deg);
+    }
+}
 
 @-webkit-keyframes spin {
     0%   { 

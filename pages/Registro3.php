@@ -1,3 +1,19 @@
+<?php
+     // SAVING the data of the form - handled by "registration-inc.php"
+     session_start();
+     // Store the submitted data sent
+     // via POST method, stored 
+     
+     // Temporarily in $_POST structure.
+     $_SESSION['firstname'] = $_SESSION['firstname'];
+     $_SESSION['lastname'] = $_SESSION['lastname'];
+     $_SESSION['promo'] = $_SESSION['promo'];
+     $_SESSION['email'] = $_POST['email'];
+     $_SESSION['pwd']   = $_POST['user_pwd'];
+     
+    echo $_SESSION['email'];
+?>
+
 <!-- HTML de la 3ra sección de registro -->
 <!DOCTYPE html>
 <html lang="es">
@@ -19,12 +35,12 @@
           <a href="">
                <img src="../resources/img/Profile.png" alt="">     
           </a>
-          <form class="formb" action="" method="post">
+          <form class="formb" action="<?php echo htmlspecialchars("./success.php"); ?>" method="post">
                <div class="label">
                     <label for="">Fecha de nacimiento</label>
-                    <input required type="date" class="input" name="Birthday" id="">
+                    <input required type="date" class="input" name="birthday">
                </div>
-               <button class="button2 textcenter" type="submit">Submit</button>
+               <button class="button2 textcenter" name="submit" type="submit">Submit</button>
           </form>
      </div>
 

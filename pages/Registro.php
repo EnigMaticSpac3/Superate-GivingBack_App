@@ -1,6 +1,6 @@
 <?php
 include '../database/connect-db.php';
-
+session_start();
 // The data of the form will be handled by "registration-inc.php" IN the -Registration2.php-
 
 ?>

@@ -1,5 +1,7 @@
 <?php
 session_start();
+session_unset();
+session_destroy();
 
 if (!isset($_SESSION['email'])) {
   header("location: ./pages/welcome.php");
@@ -30,7 +32,7 @@ if (!isset($_SESSION['email'])) {
     <div class="Home-Inicio">
         <div class="Logo-Home">
             <img src="../resources/img/Profile.png" alt="">
-            <h1>Hello, Name</h1>
+            <h1><?php echo $_SESSION['email'] ?></h1>
             <p>This is the lastest for you.</p>
         </div>
     </div>

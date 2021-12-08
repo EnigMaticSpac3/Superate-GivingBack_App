@@ -2,25 +2,32 @@
     "short_name": "Giver",
     "name": "Giver App",
     "icons": [
-        {
-            "src": "./resources/img/giverlogooriginal.svg",
-            "sizes": "any",
-            "purpose": "maskable"
-        },
+        
         {
             "src": "./resources/img/icons/givericon-192x192.png",
             "type": "image/png",
-            "sizes": "192x192"
+            "sizes": "192x192",
+            "purpose": "maskable"
         },
         {
             "src": "./resources/img/icons/givericon-512x512.png",
             "type": "image/png",
             "sizes": "512x512"
+        },
+        {
+            "src": "./resources/img/icons/givericon-512x512square.png",
+            "type": "image/png",
+            "sizes": "512x512",
+            "purpose": "maskable"
         }
     ],
-    "start_url": "/index.php",
-    "scope": "/index.php",
+    "start_url": "/Superate-GivingBack_App/index.php",
+    "scope": "/Superate-GivingBack_App/",
     "background_color": "#FFFFFF",
     "display": "standalone",
-    "theme_color": "#FFFFFF"
+    "theme_color": "#FFFFFF",
+    "related_applications": [{
+        "platform": "webapp",
+        "url": "https://localhost:8848/Superate-GivingBack_App/"
+      }]
 }

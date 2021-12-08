@@ -47,7 +47,7 @@
 }
 
 /* ==========================================================================
- Author's custom styles
+ Author's custom styles  -OpenSourceCode
  ========================================================================== */
 
 #loader-wrapper {
@@ -217,4 +217,19 @@
 }
 
 
-
+/* 
+===================================
+    SERVER-MESSAGE
+===================================
+*/
+.server-message {
+    position: absolute;
+    display: block;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    padding: 1em;
+    background-color: #94551b;
+    font-weight: bold;
+    color: #cecece;
+}

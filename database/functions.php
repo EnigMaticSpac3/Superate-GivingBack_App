@@ -1,5 +1,5 @@
 <?php 
-// This functions verifies if the user has ONLY LETTERS and SPACES
+// This functions verifies if the user has ONLY LETTERS and SPACES ---This should be made by javascript---
 function invalidUsername($username) {
   $result = false;
   if (!preg_match("/^[a-zA-Z\s\D]+$/", $username))
@@ -11,12 +11,12 @@ function invalidUsername($username) {
   }; return $result;
 }
 
-// This functions verifies the USER EXISTS
-function userExists($conn, $email) {
-  $sql   = "SELECT * FROM registration WHERE email=?;";
+// This functions verifies IF the USER EXISTS
+function userExists($conn, $email, $loc) {
+  $sql   = "SELECT * FROM users WHERE user_email=?;";
   $stmt  = mysqli_stmt_init($conn);
   if (!mysqli_stmt_prepare($stmt, $sql)) {
-    header("location: ../pages/registration.php?error=stmtfailedemail");
+    header($loc);
     exit();
   }
 
@@ -36,42 +36,43 @@ function userExists($conn, $email) {
 }
 
 // This functions CREATES a NEW user
-function createUser($conn, $name, $email, $password) {
-  $sql   = "INSERT INTO registration (names, email, password, createdOn) VALUES(?, ?, ?, NOW());";
+function createUser($conn, $firstname, $lastname, $email, $pwd, $promo) {
+  $sql = "INSERT INTO users (user_firstname, user_lastname, promo, user_email, user_pwd, createdOn) VALUES (?, ?, ?, ?, ?, NOW());";
+
   $stmt  = mysqli_stmt_init($conn);
   if (!mysqli_stmt_prepare($stmt, $sql)) {
-    header("location: ../pages/registration.php?error=stmtfailedcreateuser");
+    header("location: ../pages/Registro3.php?error=stmtfailedcreateuser");
     exit();
   }
 
-  mysqli_stmt_bind_param($stmt, "sss", $name, $email, $password);
+  mysqli_stmt_bind_param($stmt, "sssss", $firstname, $lastname, $promo, $email, $pwd);
   mysqli_stmt_execute($stmt);
   mysqli_stmt_close($stmt);
-  header("location: ../pages/login.php?registration=succesful");
+  header("location: ../pages/welcome.php?registration=succesful");
   exit();
 }
 
 // This functions LOGINS the user
-function loginUser($conn, $email, $password) {
-  $userExists = userExists($conn, $email);
+function loginUser($conn, $email, $password, $loc) {
+  $userExists = userExists($conn, $email, $loc);
 
   if ($userExists === false) {
-    header("location: ../pages/login.php?error=wronglogin-userfalse");
+    header("location: ../pages/inicio_de_sesion.php?error=wronglogin-userfalse");
     exit();
   }
 
-  $dbpassword    = $userExists["password"];
+  $dbpassword    = $userExists["user_pwd"];
   // $checkpassword = password_verify($password, $dbpassword); 
   $checkpassword = ($dbpassword === $password);
 
   if ($checkpassword === false) {
-    header("location: ../pages/login.php?error=wronglogin-pwdfalse");
+    header("location: ../pages/inicio_de_sesion.php?error=wronglogin-pwdfalse");
     exit();
   } else if ($checkpassword === true) {
     session_start();
-    $_SESSION['email']  = $userExists['email'];
-    $_SESSION['name']   = $userExists['names'];
-    $_SESSION['userID'] = $userExists['id'];
+    $_SESSION['user_email']  = $userExists['user_email'];
+    $_SESSION['name']        = $userExists['user_firstname'];
+    $_SESSION['userID']      = $userExists['user_id'];
     header("location: ../index.php");
     exit();
   }

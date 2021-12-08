@@ -1,10 +1,12 @@
 <?php
 session_start();
-session_unset();
-session_destroy();
 
-if (!isset($_SESSION['email'])) {
-  header("location: ./pages/welcome.php");
+if (!isset($_SESSION['userID'])) {
+    session_unset();
+    session_destroy();
+    header("location: ./pages/welcome.php");
+} else {
+    echo "hola";
 }
 
 ?>
@@ -12,11 +14,11 @@ if (!isset($_SESSION['email'])) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?php include "./includes/meta-inc.php" ?>
     <title>Home</title>
-    <link rel="stylesheet" href="../resources/style/Home.css">
+    <link rel="stylesheet" href="./resources/style/homestyles.css">
+    <!-- MANIFEST - MAKES THE PAGE AN APP -->
+    <link rel="manifest" href="../manifest.json">
 </head>
 <body>
     <div id="WelcomeDiv">
@@ -32,7 +34,7 @@ if (!isset($_SESSION['email'])) {
     <div class="Home-Inicio">
         <div class="Logo-Home">
             <img src="../resources/img/Profile.png" alt="">
-            <h1><?php echo $_SESSION['email'] ?></h1>
+            <h1><?php echo $_SESSION['user_email'] ?></h1>
             <p>This is the lastest for you.</p>
         </div>
     </div>
@@ -58,6 +60,18 @@ if (!isset($_SESSION['email'])) {
       </article>
         
 
-
+<script>
+    if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function(){
+                navigator.serviceWorker.register('service-worker.js').then(function(
+                    registratration) {
+                    console.log("Registration with scope: "
+                    , registratration.scope);
+                }, function(err) {
+                    console.log("Registration Failed: ", err);
+                })
+            })
+        }
+</script>
 </body>
 </html>

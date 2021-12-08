@@ -38,17 +38,17 @@ session_destroy();
             <h1>Bienvenido</h1>
         </div>
         <img class="img1" src="../resources/img/img2.png" alt="logo">
-        <div class="center">
-            <p>Ya tienes una cuenta? <a href="./inicio_de_sesion.html">Iniciar sesión</a></p>        
-        </div>
-        <br>
+        
        
         <div class="center">
-            <a href="./account.php">
-                <input class="btn" type="submit"   value="Iniciar sesión con Microsoft"/>
+            <a href="./inicio_de_sesion.php">
+                <input class="btn" type="submit" value="Iniciar sesión"/>
             <a href="./Registro.php">
-                <input class="btn2" type="submit"   value="Crear cuenta"/>
+                <input class="btn2" type="submit" value="Crear cuenta"/>
             </a>
+            <div class="add-to">
+                <button class="btn add-to-btn">Add To Homescreen</button>
+            </div>
         </div>
     </div>
         
@@ -57,6 +57,18 @@ session_destroy();
     <!--====== Javascripts & Jquery ======-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script type="text/javascript">
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function(){
+                navigator.serviceWorker.register('../service-worker.js').then(function(
+                    registration) {
+                    console.log("Registration with scope: "
+                    , registration.scope);
+                }, function(err) {
+                    console.log("Registration Failed: ", err);
+                })
+            })
+        }
+
         $(document).ready(function() {
  
             setTimeout(function(){
@@ -64,8 +76,9 @@ session_destroy();
             }, 3000);
 
         });
+        
     </script>
-    <script src="../resources/scripts/cookie.js"></script>
+    <script src="../resources/scripts/app.js"></script>
     
 </body>
 </html>

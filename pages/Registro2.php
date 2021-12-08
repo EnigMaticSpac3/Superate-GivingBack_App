@@ -45,7 +45,7 @@
     
             <div class="label">
                     <label  >Confirmar</label>
-                    <div class="campo">
+                    <div class="campo2">
                         <input placeholder="Confirmar su contraseña" class="input" type="password" name="user_pwd2" id="pass2" required=""><span class="showp">Mostrar</span><span class="barra"></span>
                     </div>
                 </div>

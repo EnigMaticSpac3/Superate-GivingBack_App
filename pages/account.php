@@ -1,3 +1,9 @@
+<?php
+include '../database/connect-db.php';
+
+session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +24,7 @@
           <img src="../resources/img/Profile.png" alt="" />
         </div>
         <div class="profile-content">
-         <h3>Nombre Apellido</h3> 
+         <h3><?php $_SESSION["firstname"] . $_SESSION["lastname"] ?></h3> 
          <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
         </div>
       </div>

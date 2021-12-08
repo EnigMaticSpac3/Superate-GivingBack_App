@@ -1,8 +1,8 @@
 <?php 
     include '../database/connect-db.php';
-
+    session_start();
     // SAVING the data of the form - handled by "registration-inc.php"
-    include '../database/registration-inc.php';
+    
         
     // Store the submitted data sent
     // via POST method, stored 
@@ -32,19 +32,19 @@
         </div>
         <form class="formb" action="./Registro3.php" method="post">
             <div class="label">
-                    <label for="">Email</label>
+                    <label>Email</label>
                     <input placeholder="Ingrese su correo electronico" class="input" type="email" name="email" id="name" required><span class="barra"></span>
             </div>
     
             <div class="label">
-                    <label for="">Contraseña</label>
+                    <label>Contraseña</label>
                     <div class="campo">
-                        <input placeholder="Ingrese una contraseña" class="input" type="password" name="user_pwd" id="pass" required=""><span class="showp">Mostrar</span><span class="barra"></span>
+                        <input placeholder="Ingrese una contraseña" class="input" type="password" name="user_pwd" id="pass" required><span class="showp">Mostrar</span><span class="barra"></span>
                     </div>                        
             </div>
     
             <div class="label">
-                    <label for="">Confirmar</label>
+                    <label  >Confirmar</label>
                     <div class="campo">
                         <input placeholder="Confirmar su contraseña" class="input" type="password" name="user_pwd2" id="pass2" required=""><span class="showp">Mostrar</span><span class="barra"></span>
                     </div>

@@ -1,3 +1,8 @@
+<?php 
+session_start();
+session_unset();
+session_destroy();
+?>
 <!-- HTML del inicio de la app -->
 <!DOCTYPE html>
 <html lang="es">

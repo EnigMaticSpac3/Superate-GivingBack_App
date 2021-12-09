@@ -1,29 +1,5 @@
 /*Main css de la parte de Inicio y registro*/
 
-@media(min-width:481px){
-     body{
-          height: 100%;
-          width: 100%;
-          background-color: black;
-          color: white;
-          font-family: 'Courier New', Courier, monospace, sans-serif;
-          font-size: 35px;
-     }
-     .message{
-          position: absolute;
-          top: 8.5em;
-          left: 9em;
-          text-align:justify;
-          font-weight: bold;
-
-     }
-
-     .content{
-          display: none;
-     }
-
-}
-
 /*Celulares*/
 @media(max-width:480px) {
     body {
@@ -32,9 +8,8 @@
          justify-content: center;
          align-items: center;
          background-image: url("../img/fondodepantalla.png");
+         background-repeat: no-repeat; /*Para que no se repita el fondo*/
     }
-    /*Mensaje para dispositivos no compatibles*/
-    .hidden {display: none;}
 
     /*Class para el texto centrado*/
     .center {
@@ -169,7 +144,51 @@
     #togglePassword{
      cursor: pointer;
     }
+     #editcon{
+          color:rgba(114, 109, 109, 0.589);
+          font-size: 2em;
+          float: right;
+     }
+     #Editphoto{
+          background-image: url(../img/Profile.png);
+          background-repeat: no-repeat;
+          background-size: 11em;
+          margin-bottom: 3em;
+          width: 11em;
+          height: 11em;
+          position: relative;
+          top: 0.9em;
+          left: 4em;
+          border: solid  rgba(0, 0, 0, 0.568) 0.2px;
+     }
+     .img1{
+          width: 15em;
+          height: 10em;
+          position: relative;
+          left: 2em;
+     }
+     .btn{
+          margin-top: 2em;
+          
+          border-radius: 1.2em;
+          border-color: rgb(127, 186, 0);
+          border: 0.1em  solid;
+          width: 18em;
+          height: 3em;
+          background-color: white;
+          color: rgb(127, 186, 0);
+     }
+     .btn2 {
+          margin-top: 2em;
 
+          border-radius: 1.2em;
+          border-color: rgb(0, 164, 239);
+          border: 0.1em  solid;
+          width: 18em;
+          height: 3em;
+          background-color: white;
+          color: rgb(35, 88, 165);
+     }
 
 }  
 

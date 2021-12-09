@@ -23,6 +23,10 @@
     <title>Registro</title>
     <link rel="stylesheet" href="../resources/style/mainInicio.css">
     <link rel="stylesheet" href="../resources/style/Registro.css">
+    <link rel="stylesheet" href="../resources/style/Hidden.css">
+    <!-- FONT AWESOME SCRIPT -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+</head>
 </head>
 <body>
      <p class="hidden message">_No compatible con este dispositivo.</p>
@@ -31,9 +35,11 @@
           <div class="center title">
                <h1>Registro</h1>
           </div>
-          <a href="">
-               <img src="../resources/img/Profile.png" alt="">     
-          </a>
+          <div id="Editphoto">
+               <a href="#">
+                    <i class="fas fa-pen-square" id="editcon"></i>
+               </a>
+          </div>
           <form class="formb" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                <div class="label">
                     <label>Fecha de nacimiento</label>

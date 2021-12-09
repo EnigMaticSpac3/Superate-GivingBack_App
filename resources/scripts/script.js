@@ -1,29 +1,29 @@
 // Mostrar/Ocultar contraseña
-document.querySelector('.campo span').addEventListener('click', e => {
-    const passwordInput = document.querySelector('#pass');
-    if (e.target.classList.contains('show')) {
-        e.target.classList.remove('show');
-        e.target.textContent = 'Ocultar';
-        passwordInput.type = 'text';
-    } else {
-        e.target.classList.add('show');
-        e.target.textContent = 'Mostrar';
-        passwordInput.type = 'password';
-    }
-});
+// document.querySelector('.campo span').addEventListener('click', e => {
+//     const passwordInput = document.querySelector('#pass');
+//     if (e.target.classList.contains('show')) {
+//         e.target.classList.remove('show');
+//         e.target.textContent = 'Ocultar';
+//         passwordInput.type = 'text';
+//     } else {
+//         e.target.classList.add('show');
+//         e.target.textContent = 'Mostrar';
+//         passwordInput.type = 'password';
+//     }
+// });
 
-document.querySelector('.campo2 span').addEventListener('click', e => {
-    const passwordInput = document.querySelector('#pass2');
-    if (e.target.classList.contains('show')) {
-        e.target.classList.remove('show');
-        e.target.textContent = 'Ocultar';
-        passwordInput.type = 'text';
-    } else {
-        e.target.classList.add('show');
-        e.target.textContent = 'Mostrar';
-        passwordInput.type = 'password';
-    }
-});
+// document.querySelector('.campo2 span').addEventListener('click', e => {
+//     const passwordInput = document.querySelector('#pass2');
+//     if (e.target.classList.contains('show')) {
+//         e.target.classList.remove('show');
+//         e.target.textContent = 'Ocultar';
+//         passwordInput.type = 'text';
+//     } else {
+//         e.target.classList.add('show');
+//         e.target.textContent = 'Mostrar';
+//         passwordInput.type = 'password';
+//     }
+// });
 
 // Evalua si la contraseña es debil, media, fuerte y si necesita más carácteres.
 $('#pass').keyup(function(e) {

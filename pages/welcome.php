@@ -13,7 +13,7 @@ session_destroy();
     <!-- Stylesheets -->
     <link rel="stylesheet" href="../resources/style/Index.css">
     <link rel="stylesheet" href="../resources/style/mainInicio.css">
-
+    <link rel="stylesheet" href="../resources/style/Hidden.css">
     <!-- MANIFEST - MAKES THE PAGE AN APP -->
     <link rel="manifest" href="../manifest.json">
 

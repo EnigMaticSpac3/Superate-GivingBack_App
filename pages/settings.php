@@ -7,6 +7,7 @@
     <title>Settings</title>
     <link rel="stylesheet" href="../resources/style/settings.css">
     <link rel="stylesheet" href="../resources/style/mainHome.css">
+    <link rel="stylesheet" href="../resources/style/Hidden.css">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
@@ -15,18 +16,16 @@
     />
 </head>
 <body>
-
-
-    <h1 class="title"> 
-            <a href="#" class="back"><i class="fas fa-caret-left"></i></a>
-            Settings
-    </h1>
-    
-    <nav class="nav-main">
-        
+    <p class="hidden message">_No compatible con este dispositivo.</p>
+    <div>
+     <div class="blueblock">
+        <a href="account.php" class="back"><i class="fas fa-caret-left"></i></a>
+        <h1 class="title1"> Settings</h1>
+     </div>
+     <nav class="nav-main">
         <!--menu-->
         <div class="nav-main_menu">
-            <a href="account.html" class="nav-main_link-item">
+            <a href="account.php" class="nav-main_link-item">
                 <i class="far fa-user-circle" style="padding: 3%;"></i>
                 Account
             </a>
@@ -42,15 +41,16 @@
                 <i class="fas fa-info-circle" style="padding: 3%;"></i>
                 Information
             </a>
-            <a href="#" class="nav-main_link-item">
+            <a href="../logout.php" class="nav-main_link-item">
                 <i class="fas fa-sign-out-alt" style="padding: 3%;"></i>
                 Sign out
             </a>
         </div>
-    </nav>
-    
-    <img src="img/logo.PNG" alt="">
+     </nav>
 
-    
+    <img class="lsize" src="../resources/img/giverlogooriginal.svg" alt="">
+    <img class="slsize" src="../resources/img/superatelogo.png" alt="">
+
+    </div>
 </body>
 </html>

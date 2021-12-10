@@ -21,6 +21,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
+    <link rel="stylesheet" href="../resources/style/Index.css">
     <link rel="stylesheet" href="../resources/style/mainInicio.css">
     <link rel="stylesheet" href="../resources/style/Registro.css">
     <link rel="stylesheet" href="../resources/style/Hidden.css">
@@ -30,7 +31,15 @@
 </head>
 <body>
      <p class="hidden message">_No compatible con este dispositivo.</p>
-     
+     <?php
+     if (isset($_GET['error'])) {
+      if ($_GET['error'] == 'userexists') {
+        echo '<div class="server-message">
+        <p>Este usuario ya existe</p>
+        </div>';
+        }  
+    }
+    ?>
      <div class="content">
           <div class="center title">
                <h1>Registro</h1>

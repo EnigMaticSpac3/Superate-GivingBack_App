@@ -21,7 +21,7 @@
             </li>
             <!-- ADD MESSAGE BUTTON -->
             <li class="list add-btn">
-                <a href="#">
+                <a href="./pages/AddPost.php">
                     <span class="icon">
                         <i class="fas fa-plus"></i>
                     </span>
@@ -39,7 +39,7 @@
             </li>
             <!-- CONFIGURATION BUTTON -->
             <li class="list">
-                <a href="#">
+                <a href="../../Superate-GivingBack_App/pages/settings.php">
                     <span class="icon">
                         <i class="fas fa-cog"></i>
                     </span>

@@ -13,6 +13,7 @@ session_start();
      
      <?php include "../includes/meta-inc.php" ?>
     <link rel="stylesheet" href="../resources/style/mainInicio.css">
+    <link rel="stylesheet" href="../resources/style/Hidden.css">
     <title>Registro</title>
 </head>
 <body>

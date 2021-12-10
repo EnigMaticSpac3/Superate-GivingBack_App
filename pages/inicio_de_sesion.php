@@ -19,6 +19,7 @@
     <title>Inicio de Sesión</title>
     <link rel="stylesheet" href="../resources./style./Index.css">
     <link rel="stylesheet" href="../resources/style/mainInicio.css">
+    <link rel="stylesheet" href="../resources/style/Hidden.css">
 </head>
 <body>
     <p class="hidden message">_No compatible con este dispositivo.</p>

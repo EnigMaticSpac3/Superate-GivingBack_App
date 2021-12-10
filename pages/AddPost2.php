@@ -12,7 +12,7 @@ if (!isset($_SESSION['userID'])) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <?php include "../includes/meta-inc.php" ?>
+<?php include "../includes/meta-inc.php" ?>
      <title>Add post</title>
      <link rel="stylesheet" href="../resources/style/homestyles.css">
      <link rel="stylesheet" href="../resources/style/AddPost.css">
@@ -22,10 +22,7 @@ if (!isset($_SESSION['userID'])) {
 <body>
      <p class="hidden message">_No compatible con este dispositivo.</p>
      <div class="container">
-          <a href="../index.php">
-               <i class="fas fa-times" id="icon"></i>
-
-          </a>
+          <i class="fas fa-times" id="icon"></i>
           <div>
                <div id="profile1"></div>
                <div class="profileContainer">
@@ -33,7 +30,8 @@ if (!isset($_SESSION['userID'])) {
                     <p class="level">Senior/ Junior/ Freshman</p>
                </div>
           </div>
-          <textarea name="" id="" cols="30" rows="10" placeholder="Escribe tu mensaje"></textarea>
+          <textarea name="" id="" cols="30" rows="10"> Escribe tu mensaje
+          </textarea>
      </div>   
      <?php include "../includes/footer-inc.php" ?>
 </body>

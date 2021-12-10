@@ -30,6 +30,7 @@ function userExists($conn, $email, $loc) {
   } else {
     $check = false;
     return $check;
+    header($loc);
   }
 
   mysqli_stmt_close($stmt);
@@ -38,7 +39,6 @@ function userExists($conn, $email, $loc) {
 // This functions CREATES a NEW user
 function createUser($conn, $firstname, $lastname, $email, $pwd, $promo) {
   $sql = "INSERT INTO users (user_firstname, user_lastname, promo, user_email, user_pwd, createdOn) VALUES (?, ?, ?, ?, ?, NOW());";
-
   $stmt  = mysqli_stmt_init($conn);
   if (!mysqli_stmt_prepare($stmt, $sql)) {
     header("location: ../pages/Registro3.php?error=stmtfailedcreateuser");

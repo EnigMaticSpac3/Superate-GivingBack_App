@@ -9,9 +9,18 @@ if (isset($_POST['submit'])) {
     $promo     = $_SESSION['promo'];
     $email     = $_SESSION['email'];
     $pwd       = $_SESSION['pwd'];
- 
-    require './functions.php';
-    createUser($conn, $firstname, $lastname, $email, $pwd, $promo);
+    $loc       = "location: ../pages/Registro3.php?error=userexists";
+
+    require_once "../database/functions.php";
+    $userExists = userExists($conn, $email, $loc);
+    if ($userExists === false) {
+        createUser($conn, $firstname, $lastname, $email, $pwd, $promo);
+        exit();
+    } else {
+        header($loc);
+        exit();
+    }
+    
 } else {
     header('./Registro3.php?error=noinsert');
 }

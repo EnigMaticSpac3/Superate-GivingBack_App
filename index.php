@@ -7,6 +7,14 @@ if (!isset($_SESSION['userID'])) {
     header("location: ./pages/welcome.php");
 } else {
     echo "PROBANDO LA PARTE DE MENSAJERÍA";
+};
+
+include './database/connect-db.php';
+
+if(isset($_POST["addPost"])) {
+    $post = $conn -> real_escape_string($_POST['post']);
+
+    // $conn -> query("INSERT INTO messages (user_id, messages) VALUES ('".$_SESSION['userID']"', '$post', NOW())");
 }
 
 ?>
@@ -35,6 +43,7 @@ if (!isset($_SESSION['userID'])) {
     
     <?php include "./includes/footer-inc.php" ?>   
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
     if ('serviceWorker' in navigator) {
             window.addEventListener('load', function(){
@@ -47,6 +56,28 @@ if (!isset($_SESSION['userID'])) {
                 })
             })
         }
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#addPost").on('click', function () {
+            var post = $("mainPost").val();
+
+            if (post.length > 5) {
+                $.ajax({
+                    url: "index.php",
+                    method: "POST",
+                    dataType: "text",
+                    data: {
+                        addPost: 1,
+                        post: post
+                    }, success: function (response) {
+                        console.log(response);
+                    }
+                })
+            }
+        })
+    })
+
 </script>
 </body>
 </html>

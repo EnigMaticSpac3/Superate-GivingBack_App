@@ -34,7 +34,7 @@ session_destroy();
     <p class="hidden message">_No compatible con este dispositivo.</p>
 
     <div id="content" class="content">
-        <div class="center title">
+        <div class="title">
             <h1>Bienvenido</h1>
         </div>
         <img class="img1" src="../resources/img/img2.png" alt="logo">
@@ -47,7 +47,7 @@ session_destroy();
                 <input class="btn2" type="submit" value="Crear cuenta"/>
             </a>
             <div class="add-to">
-                <button class="btn add-to-btn">Add To Homescreen</button>
+                <button class="btn orange add-to-btn">Add To Homescreen</button>
             </div>
         </div>
     </div>

@@ -1,5 +1,5 @@
 <?php
-include "../database/connect-db.php";
+include "../database/database-connection.php";
 
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);

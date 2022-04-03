@@ -1,0 +1,11 @@
+{
+    "autoload": {
+        "psr-4": {
+            "MyApp\\": "src"
+        }
+    },
+    "require": {
+        "twbs/bootstrap-icons": "^1.8",
+        "pusher/pusher-php-server": "^7.0"
+    }
+}

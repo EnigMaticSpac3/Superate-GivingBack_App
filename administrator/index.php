@@ -1,64 +1,65 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <title>Buscador</title>
-</head>
-<body>
-    <center>
-    <h1>Buscador en Base de Datos ¡Supérate!</h1>
+<?php
+session_start();
+foreach ($_SESSION['user_data'] as $key => $value) {
+    $promo      = $value['promo'];
+    $firstname  = $value['firstname'];
+    $lastname   = $value['lastname'];
+}
+if(!isset($_GET['user'])) {
+    header("location: login.php?userdoesnotexists");
+} elseif ($promo != 'admin') { /* la persona no tiene permitido entrar aquí */
+    echo "algo anda mal";
+    session_unset();
+    session_destroy();
+    header('location: ../index.php');
+}
+require_once "../database/database-connection.php";
+$database       = new DatabaseConnect;
+$connection     = $database->connect();
 
-    <form action="index.php" method="POST" class="d-flex" style="width:500px">
-        <input type="text" name="buscar" class="form-control me-2">
-        <button class="btn btn-outline-success" type="submit" value="Buscar">Search</button>
-      </form>
+$consulta       = "SELECT user_id, user_firstname, user_lastname, promo, user_email, createdOn FROM users";
+$resultado      = $connection->prepare($consulta);
+$resultado->execute();
+$data           = $resultado->fetchAll(PDO::FETCH_ASSOC);
+require_once './includes/header.php';
+?>
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+                    <div class="table-responsive">
+                        <table id="data-table" class="table table-striped table-bordered table-condensed" style="width: 100%;">
+                            <thead class="text-center">
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Nombre</th>
+                                    <th>Apellido</th>
+                                    <th>Promo</th>
+                                    <th>Email</th>
+                                    <th>Creado El</th>
+                                    <th><i class="fa-solid fa-gear"></i></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                foreach ($data as $info){
+                                ?>
+                                <tr>
+                                    <th><?php echo $info['user_id'] ?></th>
+                                    <th><?php echo $info['user_firstname'] ?></th>
+                                    <th><?php echo $info['user_lastname'] ?></th>
+                                    <th><?php echo $info['promo'] ?></th>
+                                    <th><?php echo $info['user_email'] ?></th>
+                                    <th><?php echo $info['createdOn'] ?></th>
+                                    <th><button class="btn btn-primary"><i class="fa-regular fa-pen-to-square"></i></button></th>
+                                </tr>    
+                                <?php } ?> 
+                            </tbody>
+                        </table>
 
-    </form>    
-    </center>
-    <hr>
-    <center>
-    <h1>Resultados de la busqueda</h1>
-    </center>
-    <table border="2px" class="table table-success table-striped">
-        <thead>
-            <th>ID</th>
-            <th>Nombre</th>
-            <th>Apellido</th>
-            <th>Email</th>
-            <th>Contraseña</th>
-            <th>Promo</th>
-            <th>Editar</th>
-            <th>Eliminar</th>
-        </thead>
-        <tbody>
-            <?php 
-            
-            include './read.php';
-            
-            while ($row = mysqli_fetch_array($sql_query)){?>
-                <tr>
-                    <td><?= $row['user_id'] ?></td>
-                    <td><?= $row['user_firstname'] ?></td>
-                    <td><?= $row['user_lastname'] ?></td>
-                    <td><?= $row['promo'] ?></td>
-                    <td><?= $row['user_email'] ?></td>
-                    <td><?= $row['user_pwd'] ?></td>
-                    <td>
-                    <a href="../administrator/edit.php?id=<?= $row["user_id"] ?>">
-                            <button class="btn btn-primary">Editar</button>
-                    </a>
-                    </td>    
-                    <td><a href="../administrator/delete.php?id=<?php echo $row["user_id"]?>">
-                            <button class="btn btn-danger">Eliminar</button>
-                    </a> </td>
-                </tr>
+                    </div>
 
-            <?php }
-            ?>
-        </tbody>  
-    </table>  
-</body>
-</html>
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+<?php require_once './includes/footer.php' ?>

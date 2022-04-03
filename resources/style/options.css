@@ -1,0 +1,71 @@
+/* GLOBAL COLORS */
+:root {
+    --blue: #0c4a88;
+    --blue-alt: #62bee0;
+    --grey: #e1e1e1;
+    --green: #7bc21d;
+    --grey-text: #858585;
+}
+/* 
+  ===============================
+  SETTINGS PAGE
+  ===============================
+  */
+.header-title {
+    position: relative;
+    text-align: center;
+    background-color: var(--blue);
+    color: #fff;
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
+.header-title p {
+    font-size: 3rem;
+    font-weight: bold;
+}
+.header-title .return-btn {
+    font-size: 5em;
+    color: #fff;
+    position: absolute;
+    left: 4rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding-left: 4rem;
+    padding-top: 4rem;
+}
+
+.nav-menu a {
+    width: max-content;
+    color: inherit;
+    font-weight: bold;
+    display: block;
+    font-size: 25px;
+}
+
+.logos {
+    width: 100%;
+    display: flex;
+    position: absolute;
+    bottom: 4em;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+.giver-logo {
+    width: 5em;
+}
+.superate-logo {
+    width: 10em;
+}
+/* 
+===============================
+  ACCOUNTS PAGE
+===============================
+*/
+

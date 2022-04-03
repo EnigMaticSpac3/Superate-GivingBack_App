@@ -1,56 +1,60 @@
-<?php 
-session_start();
-session_unset();
-session_destroy();
-?>
-<!-- HTML del inicio de la app -->
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <?php include "../includes/meta-inc.php"; ?>
-    <title>Inicio</title>
 
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="../resources/style/Index.css">
-    <link rel="stylesheet" href="../resources/style/mainInicio.css">
-    <link rel="stylesheet" href="../resources/style/Hidden.css">
+<?php 
+    session_start();
+    session_unset();
+    session_destroy();
+
+    // Add the name of the page inside << $nombre_de_pagina >> variable
+    $nombre_de_pagina = "Welcome | GIVER" ; // page's name
+    include "../includes/header-login-register.php"; 
+?>
     <!-- MANIFEST - MAKES THE PAGE AN APP -->
     <link rel="manifest" href="../manifest.json">
 
 </head>
 <body>
+    <div class="hidden message">
+        <p>No compatible con este dispositivo.</p>
+        <p>Abrir desde un móvil</p>
+    </div>
     
     <div id="loader-wrapper">
-        <div id="loader"></div>
+        <div id="loader-centered">
 
-        <div class="loader-section section-left"></div>
-        <div class="loader-logo section-left"></div> <!-- This is the logo, a bit bug but.. works -->
-        <div class="loader-section section-right"></div>
-
-    </div>
-    
-    
-
-    <p class="hidden message">_No compatible con este dispositivo.</p>
-
-    <div id="content" class="content">
-        <div class="title">
-            <h1>Bienvenido</h1>
+            <div id="loader"></div>
+            
+            <div class="loader-section section-left"></div>
+            <div class="loader-logo section-left"></div> <!-- This is the logo, a bit bug but.. works -->
+            <div class="loader-section section-right"></div>
+            
         </div>
-        <img class="img1" src="../resources/img/img2.png" alt="logo">
+    </div>
+    <main>
         
-       
-        <div class="center">
-            <a href="./inicio_de_sesion.php">
-                <input class="btn" type="submit" value="Iniciar sesión"/>
-            <a href="./Registro.php">
-                <input class="btn2" type="submit" value="Crear cuenta"/>
-            </a>
-            <div class="add-to">
-                <button class="btn orange add-to-btn">Add To Homescreen</button>
+        
+        <div class="content">
+            <h1 class="content-title">Bienvenido</h1>
+            <div class="content-body">
+
+                <img class="welcome-img" src="../resources/img/img2.png" alt="logo">
+                
+                <div class="welcome-buttons">
+                    <a href="./inicio_de_sesion.php" onclick="lock('portrait')" class="buttons-comp">
+                        Iniciar Sesión
+                    <a href="./Registro.php" class="buttons-comp">
+                        Crear Cuenta
+                    </a>
+                    <!-- <div class="add-to">
+                        <button class="buttons-comp orange add-to-btn">Añadir App</button>
+                    </div> -->
+                    <a href="#" onclick="lock('portrait')" class="add-to buttons-comp">
+                        Añadir App
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
+    </main>
         
 
 
@@ -78,7 +82,8 @@ session_destroy();
         });
         
     </script>
-    <script src="../resources/scripts/app.js"></script>
+    <script src="../resources/scripts/install-app.js"></script>
+    <script src="../resources/scripts/lockscreen.js"></script>
     
 </body>
 </html>

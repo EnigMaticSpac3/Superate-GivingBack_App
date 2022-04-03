@@ -1,65 +1,94 @@
+<!DOCTYPE html>
 <?php
      session_start();
-     // Store the submitted data sent
-     // via POST method, stored 
      
-     // Temporarily in $_POST structure.
      if (isset($_POST['next2'])) {
-          $_SESSION['email'] = $_POST['email'];
-          $_SESSION['pwd']   = $_POST['user_pwd'];
+          /** Store the submitted data sent
+           * via POST method, stored Temporarily in $_POST structure.
+          */
+          $token = filter_input(INPUT_POST, 'authenticate', FILTER_SANITIZE_SPECIAL_CHARS);
+          if (!$token || $token !== $_SESSION['secret_token']) {
+               // return the person back, we're having a CSRF ATTACK!!
+
+               header('Location: ./welcome.php?error=authenticate');
+
+          } else {
+
+               $_SESSION['email'] = $_POST['email'];
+               $_SESSION['pwd']   = password_hash($_POST['user_pwd'], PASSWORD_ARGON2ID);
+          }
      }
      
      // SAVING IN DATABaSE
     include '../database/registration-inc.php';
+
+
+// <!-- HTML de la 3ra sección de registro -->
+
+     // Add the name of the page inside this variable
+    $nombre_de_pagina = "Registro | GIVER" ; // page's name
+    include "../includes/header-login-register.php";
 ?>
+</head>
 
-<!-- HTML de la 3ra sección de registro -->
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro</title>
-    <link rel="stylesheet" href="../resources/style/Index.css">
-    <link rel="stylesheet" href="../resources/style/mainInicio.css">
-    <link rel="stylesheet" href="../resources/style/Registro.css">
-    <link rel="stylesheet" href="../resources/style/Hidden.css">
-    <!-- FONT AWESOME SCRIPT -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-</head>
-</head>
 <body>
-     <p class="hidden message">_No compatible con este dispositivo.</p>
-     <?php
-     if (isset($_GET['error'])) {
-      if ($_GET['error'] == 'userexists') {
-        echo '<div class="server-message">
-        <p>Este usuario ya existe</p>
-        </div>';
-        }  
-    }
-    ?>
-     <div class="content">
-          <div class="center title">
-               <h1>Registro</h1>
-          </div>
-          <div id="Editphoto">
-               <a href="#">
-                    <i class="fas fa-pen-square" id="editcon"></i>
-               </a>
-          </div>
-          <form class="formb" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-               <div class="label">
-                    <label>Fecha de nacimiento</label>
-                    <input required type="date" class="input" name="birthday">
-               </div>
-               <button class="button2 textcenter" name="submit" type="submit">Submit</button>
-          </form>
+     <div class="hidden message">
+        <p>No compatible con este dispositivo.</p>
+        <p>Abrir desde un móvil</p>
      </div>
+    <main>
+         <div class="content">
+              <h1 class="content-title">Registro</h1>
+               <?php
+                    if (isset($error)) {
+                         if ($error == 'userexists') {
+                         echo '<div class="server-message">
+                         <p>Este Usuario ya existe. <a href="./welcome.php">Inicia Sesión</a></p>
+                         </div>';
+                         }
+                         if ($error === "success") {
+                         echo '<div class="server-message">
+                         <p>Te has Registrado. <a href="./welcome.php">Inicia Sesión</a></p>
+                         </div>';
+                         }
+                    }
+               ?>
+              <div class="content-body">
+                   <form class="form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+                   <input type="hidden" name="authenticate" value="<?php echo $_SESSION['secret_token'] ?? '' ?>">      
+                   <div class="form-body">
+                              <div class="edit-container">
+                                   <p class="edit-txt">Sube una foto de Perfil</p>
+                                   <div class="edit-photo-container">
+                                   <ion-icon class="edit-photo" name="person-outline"></ion-icon>
+                                   </div>
+                              </div>
+                              <div class="buttons-comp photo-button">
+                                   <label for="photo-file">Subir</label>
+                                   <input 
+                                   class="photo-input"
+                                   type="file"
+                                   name="photo-file"
+                                   id="photo-file">
+                                   <ion-icon class="photo-icon" name="image-outline"></ion-icon>
+                              </div>
+                         </div>
+                         <button class="buttons-comp" name="register" type="submit">Submit</button>
+                   </form>
+              </div>
+         </div>
+         <div class="btn-goback"><a href="./Registro2.php"><ion-icon class="icon" name="caret-back-outline"></ion-icon></a></div>
+    </main>
 
 
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <?php include "../includes/footer-login-register.php" ?>
 
+    <!-- VALIDAR QUE LA IMAGEN SUBIDA SEA PNG O JPG Y DENTRO DEL TAMAÑO ACEPTABLE -->
+    <script type="text/javascript">
+         $(document).ready(function() {
+               const input = $('photo-input');
+         })
+         
+    </script>
 </body>
 </html>

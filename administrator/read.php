@@ -1,5 +1,5 @@
 <?php 
-include '../database/connect-db.php';
+include '../database/database-connection.php';
 
 if(!isset($_POST['buscar'])){
     $_POST['buscar'] = "";

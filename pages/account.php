@@ -1,26 +1,36 @@
+<!DOCTYPE html>
 <?php
-include '../database/connect-db.php';
-
 session_start();
-if (!isset($_SESSION['email'])) {
+require_once '../database/giverapp-functions.php';
+
+
+foreach ($_SESSION['user_data'] as $key => $value) {
+  $user_id    =   $value['id'];
+  $firstname  =   $value['firstname'];
+  $lastname   =   $value['lastname'];
+  $promo      =   $value['promo'];
+}
+$user_object = new GiverAppFunctions;
+$user_object->setUserId($user_id);
+$user_object->get_user_data_by_id();
+
+if (!isset($_SESSION['user_data'])) {
   header("location: ../index.php");
 }
 
+$nombre_de_pagina = "CUENTA | GIVER";
+include_once '../includes/header-inc.php';
 ?>
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Account</title>
-    <link rel="stylesheet" href="../resources/style/account.css">
-    <link rel="stylesheet" href="../resources/style/Hidden.css">
-    <link rel="stylesheet" href="../resources/style/homestyle.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-  </head>
-  <body>
-    <p class="hidden message">_No compatible con este dispositivo.</p>
+<link rel="stylesheet" href="../resources/style/app.css">
+<link rel="stylesheet" href="../resources/style/account.css">
+</head>
+
+<body>
+  <div class="hidden message">
+    <p>No compatible con este dispositivo.</p>
+    <p>Abrir desde un móvil</p>
+  </div>
+  <main>
     <div class="profile">
       <a href="settings.php">
         <i class="fas fa-cog" id="icn"></i>
@@ -29,15 +39,17 @@ if (!isset($_SESSION['email'])) {
         <img src="../resources/img/Profile.png" alt="" />
       </div>
     </div>
-    <div class="cnt">
+    <div class="content">
       <div class="profile-content">
-        <h3><?php $_SESSION["firstname"] . $_SESSION["lastname"] ?></h3> 
-        <p style="margin-bottom: -1em;margin-top: 0.2em; color: rgba(29, 26, 26, 0.582);">Senior/Junior/Freshman/Alumn/Teacher</p>
+        <h3><?php echo $firstname . ' ' . $lastname; ?></h3>
+        <p style="margin-bottom: -1em;margin-top: 0.2em; color: rgba(29, 26, 26, 0.582);">
+          <?php echo $promo ?>
+        </p>
         <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
       </div>
       <article class="mensaje">
         <div class="mensaje-img">
-            <img src="../resources/img/Profile.png" alt="" /> 
+          <img src="../resources/img/Profile.png" alt="" />
         </div>
         <div class="text">
           <h3>Nombre y Apellido</h3>
@@ -65,6 +77,8 @@ if (!isset($_SESSION['email'])) {
         </div>
       </article>
     </div>
-    <?php include "../includes/footer-inc.php" ?>
-  </body>
+  </main>
+  <?php include "../includes/footer-inc.php" ?>
+</body>
+
 </html>

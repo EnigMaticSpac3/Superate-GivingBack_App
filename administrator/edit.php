@@ -12,7 +12,7 @@
 </body>
 </html>
 <?php
-include '../database/connect-db.php';
+include '../database/database-connection.php';
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
   }

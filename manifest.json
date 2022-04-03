@@ -22,8 +22,9 @@
     ],
     "start_url": "/Superate-GivingBack_App/index.php",
     "scope": "/Superate-GivingBack_App/",
-    "background_color": "#FFFFFF",
-    "display": "standalone",
+    "background_color": "#0C4A88",
+    "display": "fullscreen",
+    "orientation": "portrait",
     "theme_color": "#FFFFFF",
     "related_applications": [{
         "platform": "webapp",

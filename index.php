@@ -50,6 +50,7 @@ $nombre_de_pagina = "INICIO | GIVER";
     <!-- FONTS -->
     <link rel="stylesheet" href="../Superate-GivingBack_App/resources/fontawesome-free/css/all.css">
 
+    <script src="./remove-banner.js"></script>
     <!-- PUSHER CONNECTION -->
     <script src="https://js.pusher.com/7.0/pusher.min.js"></script>
     <script>

@@ -9,6 +9,8 @@
     <link rel="shortcut icon" href="../resources/img/icons/giverlogo.ico" type="image/x-icon">
     <link rel="stylesheet" href="../resources/style/general-styles.css">
     <link rel="stylesheet" href="../resources/style/options.css">
-
+    
+    <script src="../remove-banner.js"></script>
+    
     <!-- FONTS -->
     <link rel="stylesheet" href="../resources/fontawesome-free/css/all.css">

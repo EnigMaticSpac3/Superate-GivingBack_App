@@ -47,3 +47,4 @@
     <link rel="shortcut icon" href="../resources/img/icons/giverlogo.ico" type="image/x-icon">
     <link rel="stylesheet" href="../resources/style/general-styles.css">
     <link rel="stylesheet" href="../resources/style/login-register-styles.css">
+    <script src="../remove-banner.js"></script>

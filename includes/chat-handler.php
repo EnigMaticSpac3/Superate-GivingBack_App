@@ -8,9 +8,9 @@ $options = array(
     'useTLS' => true
 );
 $pusher = new Pusher\Pusher(
-    'dcffce94095e36ccd002', /* CREDENTIALS */
-    'af3e6783f36adec45018',
-    '1370916',
+    'APP_KEY', /* CREDENTIALS */
+    'APP_ID',
+    'APP_STH',
     $options
 );
 

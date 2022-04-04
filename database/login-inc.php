@@ -9,7 +9,7 @@ if (isset($_POST['login'])) {
 
     if (!$user_token || $user_token !== $_SESSION['secret_token']) {
         // return the person back, we're having a CSRF ATTACK!!
-        header('Location: ?error=authenticate');
+        header('Location: ../index.php?error=authenticate');
     } 
     else 
     {
@@ -39,7 +39,7 @@ if (isset($_POST['login'])) {
                     '/', "", true
                 );
                 
-                header('location: ../index.php?username='.$user_data['user_firstname']." ".$user_data['user_lastname']);
+                header('location: ../app.php?username='.$user_data['user_firstname']." ".$user_data['user_lastname']);
                 
             } else {
                 password_verify("", $user_data['user_pwd']);

@@ -32,7 +32,7 @@ $chat_data = $chat_object->get_all_chat_data();
 // HTML FROM THE PAGE
 $nombre_de_pagina = "INICIO | GIVER";
 ?>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -48,7 +48,7 @@ $nombre_de_pagina = "INICIO | GIVER";
     <link rel="stylesheet" href="./resources/style/app.css">
 
     <!-- FONTS -->
-    <link rel="stylesheet" href="../Superate-GivingBack_App/resources/fontawesome-free/css/all.css">
+    <link rel="stylesheet" href="./Superate-GivingBack_App/resources/fontawesome-free/css/all.css">
 
     <!-- PUSHER CONNECTION -->
     <script src="https://js.pusher.com/7.0/pusher.min.js"></script>

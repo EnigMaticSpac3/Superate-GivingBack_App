@@ -47,7 +47,7 @@ include "../includes/header-login-register.php";
                     }
                     if ($error === "success") {
                          echo '<div style="font-size: 4em" class="server-message">
-                         <p>Te has Registrado. <a href="../">Inicia Sesión</a></p>
+                         <p>Te has Registrado. <a href="../index.php">Inicia Sesión</a></p>
                          </div>';
                     }
                }

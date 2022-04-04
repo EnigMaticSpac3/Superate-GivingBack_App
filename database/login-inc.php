@@ -1,12 +1,12 @@
 <?php
 session_start();
+/**
+ * Checking AUTHENTICATION TOKEN
+ */
+$user_token = filter_input(INPUT_POST, 'authenticate', FILTER_SANITIZE_SPECIAL_CHARS);
 
 if (isset($_POST['login'])) {
 
-    /**
-     * Checking AUTHENTICATION TOKEN
-     */
-    $user_token = filter_input(INPUT_POST, 'authenticate', FILTER_SANITIZE_SPECIAL_CHARS);
     if (!$user_token || $user_token !== $_SESSION['secret_token']) {
         // return the person back, we're having a CSRF ATTACK!!
         header('Location: ?error=authenticate');

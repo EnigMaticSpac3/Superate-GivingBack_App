@@ -53,7 +53,7 @@ include "../includes/header-login-register.php";
                     </form>
                </div>
           </div>
-          <div class="btn-goback"><a href="./welcome.php">
+          <div class="btn-goback"><a href="../app.php">
           <ion-icon class="icon" name="caret-back-outline"></ion-icon>
           </a></div>
     </main>

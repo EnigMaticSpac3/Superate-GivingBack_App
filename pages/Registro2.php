@@ -12,7 +12,7 @@ use Symfony\Component\Routing\RequestContextAwareInterface;
     $token = filter_input(INPUT_POST, 'authenticate', FILTER_SANITIZE_SPECIAL_CHARS);
     if (!$token || $token !== $_SESSION['secret_token']) {
         // return the person back, we're having a CSRF ATTACK!!
-        header('Location: ./welcome.php?error=authenticate');
+        header('Location: ../index.php?error=authenticate');
     } else {
 
         // Store the submitted data sent

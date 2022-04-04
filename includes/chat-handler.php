@@ -1,4 +1,8 @@
 <?php
+/**
+ * HERE WE HANDLE THE DATA WITH THE PUSHER API
+ * For more information about visit https://pusher.com/docs/
+ */
 require_once dirname(__DIR__) . '/vendor/autoload.php' ;
 require_once dirname(__DIR__) . '/database/giverchat-functions.php';
 
@@ -8,9 +12,9 @@ $options = array(
     'useTLS' => true
 );
 $pusher = new Pusher\Pusher(
-    'dcffce94095e36ccd002', /* CREDENTIALS */
-    'af3e6783f36adec45018',
-    '1370916',
+    'APP_ID',               /*    APP_ID      */
+    'APP_KEY',              /*   APP_KEY     */
+    'APP_SECRET',           /*  APP_SECRET  */
     $options
 );
 

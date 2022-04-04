@@ -21,12 +21,12 @@ if (isset($_POST['next2'])) {
 // SAVING IN DATABaSE
 include '../database/registration-inc.php';
 
-
 // <!-- HTML de la 3ra sección de registro -->
 
 // Add the name of the page inside this variable
 $nombre_de_pagina = "Registro | GIVER"; // page's name
 include "../includes/header-login-register.php";
+
 ?>
 </head>
 
@@ -95,5 +95,4 @@ include "../includes/header-login-register.php";
           })
      </script>
 </body>
-
 </html>

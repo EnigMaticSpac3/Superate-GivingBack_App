@@ -71,7 +71,7 @@ require_once('../database/authenticate.php');
             </div>
         </div>
         
-        <div class="btn-goback"><a href="../app.php">
+        <div class="btn-goback"><a href="../index.php">
         <ion-icon class="icon" name="caret-back-outline"></ion-icon>
         </a></div>
     </main>

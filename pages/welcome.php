@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <?php 
     session_start();
     session_unset();
@@ -6,10 +7,10 @@
 
     // Add the name of the page inside << $nombre_de_pagina >> variable
     $nombre_de_pagina = "Welcome | GIVER" ; // page's name
-    include "./includes/header-login-register.php"; 
+    include "../includes/header-login-register.php"; 
 ?>
     <!-- MANIFEST - MAKES THE PAGE AN APP -->
-    <link rel="manifest" href="./manifest.json">
+    <link rel="manifest" href="../manifest.json">
 
 </head>
 <body>
@@ -36,10 +37,10 @@
             <h1 class="content-title">Bienvenido</h1>
             <div class="content-body">
 
-                <img class="welcome-img" src="./resources/img/img2.png" alt="logo">
+                <img class="welcome-img" src="../resources/img/img2.png" alt="logo">
                 
                 <div class="welcome-buttons">
-                    <a href="./inicio_de_sesion.php" class="buttons-comp">
+                    <a href="./inicio_de_sesion.php" onclick="lock('portrait')" class="buttons-comp">
                         Iniciar Sesión
                     <a href="./Registro.php" class="buttons-comp">
                         Crear Cuenta
@@ -47,7 +48,7 @@
                     <!-- <div class="add-to">
                         <button class="buttons-comp orange add-to-btn">Añadir App</button>
                     </div> -->
-                    <a href="#" class="add-to buttons-comp">
+                    <a href="#" onclick="lock('portrait')" class="add-to buttons-comp">
                         Añadir App
                     </a>
                 </div>
@@ -82,6 +83,7 @@
         
     </script>
     <script src="../resources/scripts/install-app.js"></script>
+    <script src="../resources/scripts/lockscreen.js"></script>
     
 </body>
 </html>

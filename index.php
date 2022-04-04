@@ -40,9 +40,9 @@
                 <img class="welcome-img" src="./resources/img/img2.png" alt="logo">
                 
                 <div class="welcome-buttons">
-                    <a href="./inicio_de_sesion.php" class="buttons-comp">
+                    <a href="./pages/inicio_de_sesion.php" class="buttons-comp">
                         Iniciar Sesión
-                    <a href="./Registro.php" class="buttons-comp">
+                    <a href="./pages/Registro.php" class="buttons-comp">
                         Crear Cuenta
                     </a>
                     <!-- <div class="add-to">

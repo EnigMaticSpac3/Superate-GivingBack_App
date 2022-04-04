@@ -44,6 +44,6 @@
     <title><?php echo $nombre_de_pagina ?></title>
     
     <!-- Stylesheets -->
-    <link rel="shortcut icon" href="../resources/img/icons/giverlogo.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../resources/style/general-styles.css">
-    <link rel="stylesheet" href="../resources/style/login-register-styles.css">
+    <link rel="shortcut icon" href="<?php echo dirname(__DIR__) ?>/resources/img/icons/giverlogo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="<?php echo dirname(__DIR__) ?>/resources/style/general-styles.css">
+    <link rel="stylesheet" href="<?php echo dirname(__DIR__) ?>/resources/style/login-register-styles.css">

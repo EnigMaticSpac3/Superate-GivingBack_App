@@ -15,7 +15,7 @@ class GiverAppFunctions {
     protected $connect; 
 
     public function __construct() {
-        require_once(dirname(__DIR__). '/database/database-connection.php');
+        require_once(__DIR__."/database-connection.php");
 
         $database_object = new DatabaseConnect;
         $this->connect = $database_object->connect();

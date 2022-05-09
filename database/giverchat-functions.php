@@ -101,5 +101,19 @@ class GiverChatFunctions {
 
 		return $statement->fetchAll(PDO::FETCH_ASSOC);
 	}
+	function get_all_chat_data_descending() {
+		$query = "SELECT comments.id, users.user_id, users.user_firstname, users.user_lastname, users.promo, comments.comment, comments.comment_date
+		FROM comments 
+		INNER JOIN users
+		ON users.user_id = comments.user_id 
+		ORDER BY comments.id DESC
+		";
+
+		$statement = $this->connect->prepare($query);
+
+		$statement->execute();
+
+		return $statement->fetchAll(PDO::FETCH_ASSOC);
+	}
 }
 	

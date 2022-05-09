@@ -1,102 +1,73 @@
-@media(max-width:480px){
-  body{
-    background-color: #0C4781;
-  }
-  .profile{
-    position: absolute;
-    width: 100%;
-    height: 10em;
-    background-color: none;
-    border:none;
-    top: 0em;
-    left: 0em;
-  }
-    
-  .fondo-profile{
-    width: 100%;
-    height: 10em;
-    border-top-left-radius: 1em;
-    border-top-right-radius: 1em;
-    object-fit: cover
-  }
- 
-  .profile-img img{
-    z-index: 1; 
-    width: 6.5em;
-    height: 6.5em;
-    position: relative;
-    margin-top: 5em;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 6.2em;
-    border: 0.4em solid rgb(127, 186, 0)
-  }
-  #icn{
-    position: relative;
-    top: 25px;
-    right: 21px;
-    font-size: 2.2em;
-    color: white;
-    float: right;
-  }
-  .cnt{
-    margin: 0;
-    padding: 0;
-    border:0;
-    position: relative;
-    top: 8em;
-    left: -0.3em;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    background-color: white;
-    overflow: hidden;
-    width: 103.7%;
-    height:675px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  }
-    
-  .profile-content h3{
-    margin: 3.5em 0 0 1.7em;
-    left: 1em;
-    font-size: 1.3em;
-    font-weight: bold;
-    text-align:justify;
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+.account-content {
+    height: 100vh;
+    width: inherit;
+    background-color: var(--blue);
+    display: grid;
+    grid-template-rows: 20% 80%;
+    grid-template-areas: 
+    "."
+    "main-box"
+    "main-box";
+}
 
-  }
-    
-  .profile-content p{
-    margin: 2em;
-    margin-bottom: 3em;
-    font-size: 1em;
-    text-align: justify;
-  }
-    
-  .mensaje{
-    margin-bottom: 0.5em;
-    left: 0.5em;
-    top: -0.5em;
-    width: 95%;
+.top-photo {
     position: relative;
-    background-color: rgba(205, 205, 205, 0.582);
-    border-radius: 0.9em
-  }
-    
-  .mensaje-img img{
-    width: 3em;
-    height: 3em;
-    position: relative;
-    margin-top: 1em;
-    display: inline-block;
-    margin-left: 1em;
-    border-radius: 2em;
-    
-  }
-    
-  .text{
-    text-align: left;
-    padding-left: 6em;
-    margin-top: -5em;
-    padding-bottom: 0.5em;
-  }
-}  
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%,-10%);
+    border: .5em solid var(--green);
+    background-color: var(--grey);
+    border-radius: 50%;
+    height: 12em;
+    width: 12em;
+}
+.main-box {
+    background-color: #eee;
+    border-top-left-radius: 2em;
+    border-top-right-radius: 2em;
+    grid-area: main-box;
+    display: grid;
+    grid-template-rows: 10% 25% 65%;
+    grid-template-areas: 
+    "top-photo"
+    "description-box"
+    "recent-box";
+}
+.description-box {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4em;
+    padding: .5em 2em;
+}
+.description-box .name {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+.description-box .promo {
+    color: var(--grey-text);
+}
+.description-box .description {
+    padding-top: 1em;
+}
+.recent-box {
+    height: 50vh;
+    padding-bottom: 9em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+    gap: 2em;
+}
+
+/* 
+    SETTING'S BUTTON
+*/
+.settings-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1.5em 1em 0 0;
+    color: #fff;
+    font-size: 2.5em;
+    cursor: pointer;
+}

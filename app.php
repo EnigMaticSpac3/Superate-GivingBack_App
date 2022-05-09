@@ -48,7 +48,7 @@ $nombre_de_pagina = "INICIO | GIVER";
     <link rel="stylesheet" href="./resources/style/app.css">
 
     <!-- FONTS -->
-    <link rel="stylesheet" href="./Superate-GivingBack_App/resources/fontawesome-free/css/all.css">
+    <link rel="stylesheet" href="./resources/fontawesome-free/css/all.css">
 
     <!-- PUSHER CONNECTION -->
     <script src="https://js.pusher.com/7.0/pusher.min.js"></script>
@@ -211,6 +211,7 @@ $nombre_de_pagina = "INICIO | GIVER";
                 item.addEventListener('click', activeLink));
 
             $('.home-btn').addClass('active');
+            $('.user-btn').click(function () { window.location.href = "./pages/account.php"; });
             $('.main-message-box').scrollTop($('.main-message-box')[0].scrollHeight);
 
             /* *******************

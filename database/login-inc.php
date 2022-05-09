@@ -44,9 +44,11 @@ if (isset($_POST['login'])) {
             } else {
                 password_verify("", $user_data['user_pwd']);
                 $error = "Verify your credentials";
+                header("location: ../pages/inicio_de_sesion.php?error=authenticate");
             }
         } else {
             $error = "This user doesn't exist. Register!";
+            header("location: ../pages/inicio_de_sesion.php?error=authenticate");
         }
     }
 }

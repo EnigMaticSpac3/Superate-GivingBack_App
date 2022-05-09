@@ -43,7 +43,7 @@
             </li>
             <!-- USER BUTTON -->
             <li class="list user-btn">
-                <a href="../../Superate-GivingBack_App/pages/account.php">
+                <a href="#">
                     <span class="icon">
                         <i class="fa-solid fa-user"></i>
                     </span>
@@ -60,18 +60,3 @@
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script> -->
 <!-- SCRIPTS -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-<script>
-    $(document).ready(function() {
-        lock('portrait');
-
-        // const list = $('.list');
-        // function activeLink () {
-        //     list.forEach((item)=> 
-        //     item.classList.remove('active'));
-        //     this.classList.add('active')
-        // }
-        // list.forEach((item) => 
-        // item.addEventListener('click', activeLink));
-
-    })
-</script>
